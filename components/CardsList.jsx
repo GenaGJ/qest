@@ -2,13 +2,15 @@ const React = require('react');
 const Layout = require('./Layout');
 const Card = require('../components/Card');
 
-module.exports = function CardsList({ title, questions }) {
+module.exports = function CardsList({ title, questionsArr }) {
   return (
     <Layout title={title}>
-      <div>
-        <Card question={questions[0]} />
+      <div id="cards">
+        <Card questions={questionsArr[0]} />
         <div>
-          <button>Continue</button>
+          <form action={`/cardsList/${questionsArr.id}`} id="updateCards">
+            <button type='submit'>Continue</button>
+          </form>
         </div>
       </div>
     </Layout>

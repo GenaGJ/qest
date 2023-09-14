@@ -5,8 +5,8 @@ router.post('/', async (req, res) => {
   try {
     const { user } = req.body;
     if (user) {
-      await User.create({ user, score: 0 });
-      res.status(201).json();
+      const data = await User.create({ user, score: 0 });
+      res.status(201).json({ message: 'ok', data });
     } else {
       res.status(400).json({ message: 'Нет user и score' });
     }
