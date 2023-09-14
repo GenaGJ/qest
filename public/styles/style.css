@@ -1,18 +1,92 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #6a77da;
+  height: 100vh;
+  padding: 20px;
+}
+
+.regist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-image: image(
+    'https://static.tildacdn.com/tild3238-6431-4437-a262-623263373337/photo.jpg'
+  );
+  border-radius: 40px;
+  width: 60vw;
+  height: 60vh;
+}
+
+.regist img {
+  width: 550px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.regist input,
+.regist button {
+  width: 40vw;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  padding-left: 10px;
+  margin-top: 20px;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+
+  font-size: 30px;
+}
+
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+
+  background-color: #58bcd7;
+  border-radius: 20px;
+  width: 97vw;
+}
+
+.navbar img {
+  width: 100px;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  background-color: #58bcd7;
+  border-radius: 20px;
+  width: 97vw;
+  height: 60px;
 }
 
 .false {
   display: none;
 }
 .true {
+  display: none;
+}
+
+.userHello {
   display: none;
 }
