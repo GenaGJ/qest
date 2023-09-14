@@ -12,7 +12,7 @@ router.use('/', mainViewRouter);
 router.use('/questions', questionsViewRouter);
 router.use('/cardlist', cardListViewRouter);
 
-router.use('/api/', mainApiRouter);
+router.use('/api', mainApiRouter);
 router.use('/api/questions', questionsApiRouter);
 router.use('/api/cardlist', cardListApiRouter);
 

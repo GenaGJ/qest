@@ -5,22 +5,23 @@ const logOut = document.getElementById('logOut');
 if (userName) {
   userName.addEventListener('submit', async (e) => {
     e.preventDefault();
-
-    const { name } = e.target;
-
-    const res = await fetch('/', {
+    const { user } = e.target;
+    const res = await fetch('/api', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        name: name.value,
+        user: user.value,
       }),
     });
     const data = await res.json();
+    console.log(data.message);
     if (data.message === 'ok') {
       userHello.style.display = 'block';
-      userHello.textContent = `Hello, ${name.value}!`;
+      userHello.textContent = `Hello, ${user.value}!`;
+    } else {
+      console.log('Error');
     }
   });
 }

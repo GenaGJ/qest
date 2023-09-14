@@ -6,6 +6,7 @@
 a {
   text-decoration: none;
   color: black;
+  cursor: pointer;
 }
 .container {
   display: flex;
@@ -66,7 +67,7 @@ a {
 }
 
 .navbar img {
-  width: 100px;
+  width: 50px;
 }
 
 .footer {
