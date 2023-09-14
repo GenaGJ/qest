@@ -18,7 +18,7 @@ module.exports = function Navbar() {
           alt=""
         />
       </div>
-      <div>Name</div>
+      <div>Hello, Name!</div>
       <div>
         <a href="">Sig In</a>
       </div>

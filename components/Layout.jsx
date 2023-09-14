@@ -11,9 +11,11 @@ module.exports = function Layout({ title, children }) {
         <script defer src="/scripts/scripts.js" />
       </head>
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <div className="container">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
