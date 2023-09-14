@@ -6,24 +6,15 @@ module.exports = function Navbar() {
     <div className="navbar">
       <div>
         <a href="">
-          <img
-            src="https://www.pinclipart.com/picdir/middle/101-1018856_picture-quiz-time-png-gif-clipart.png"
-            alt="Logo"
-          />
+          <img src="../image/logo.png" alt="Logo" />
         </a>
       </div>
       <div>
-        <img
-          src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes.png"
-          alt=""
-        />
+        <img src="../image/user.png" alt="" />
       </div>
-      <div>Hello, Name!</div>
-      <div>
-        <a href="">Sig In</a>
-      </div>
-      <div>
-        <a href="">Log Out</a>
+      <div className="userHello" id="userHello"></div>
+      <div id="logOut">
+        <a href="/">Log Out</a>
       </div>
     </div>
   );
