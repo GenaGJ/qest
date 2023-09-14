@@ -5,7 +5,7 @@ module.exports = function CardsList({ title, questions }) {
   return (
     <Layout title={title}>
       <div>
-        <Card question={questions} />
+        <Card question={questions[0]} />
         <div>
           <button>Continue</button>
         </div>

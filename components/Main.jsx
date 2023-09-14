@@ -17,7 +17,7 @@ module.exports = function Main({ title }) {
             <input type="text" name="name" required />
           </div>
           <button type="submit">
-            <a href="">Game</a>
+            <a href="/questions">Game</a>
           </button>
         </form>
       </div>
