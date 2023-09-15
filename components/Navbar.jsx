@@ -13,6 +13,9 @@ module.exports = function Navbar() {
         <img src="/image/user.png" alt="" />
       </div>
       <div className="userHello" id="userHello"></div>
+      <div>
+        <a href="/questions">In game</a>
+      </div>
       <div id="logOut">
         <a href="/">Log Out</a>
       </div>

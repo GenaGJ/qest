@@ -1,7 +1,9 @@
 const userName = document.getElementById('userName');
 const userHello = document.getElementById('userHello');
 const logOut = document.getElementById('logOut');
-const updateCards = document.getElementById('updateCards');
+const sendId = document.querySelectorAll('#sendId');
+const falseDiv = document.querySelectorAll('#false');
+const trueDiv = document.querySelectorAll('#true');
 
 if (userName) {
   userName.addEventListener('submit', async (e) => {
@@ -26,35 +28,23 @@ if (userName) {
     }
   });
 }
-//взял
-if (updateCards) {
-  updateCards.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const { name, type, img, discribe, price } = e.target;
-    const { idupdate } = e.target.dataset;
 
-    const res = await fetch(`/api/animals/${idupdate}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name: name.value,
-        type: type.value,
-        img: img.value,
-        discribe: discribe.value,
-        price: price.value,
-      }),
+if (sendId) {
+  sendId.forEach((el) => {
+    el.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const { idcard, trueanswer } = e.target.dataset;
+      const answer = e.target.answer.value;
+      if (answer !== trueanswer) {
+        el.innerHTML = `<div>Ответ не верный! Верный ответ: ${trueanswer}</div>`;
+      } else {
+        el.innerHTML = '<div>Ответ верный!</div>';
+      }
+      console.log(trueanswer, answer);
     });
-    const data = await res.json();
-    console.log(data);
-    if (data.data && data.data[0] > 0) {
-      window.location.assign('/animals');
-    } else {
-      console.log('Oshibka');
-    }
   });
 }
+
 logOut.addEventListener('click', () => {
   userHello.style.display = 'none';
   userHello.textContent = '';
