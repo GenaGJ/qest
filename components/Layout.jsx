@@ -7,9 +7,9 @@ module.exports = function Layout({ title, children }) {
     <html lang="en">
       <head>
         <title>{title}</title>
-        <link rel="icon" href="../image/logo.png" />
+        <link rel="icon" href="/image/logo.png" />
         <link rel="stylesheet" href="/styles/style.css" />
-        <script defer src="/scripts/scripts.js" />
+        <script defer src="/scripts/script.js" />
       </head>
       <body>
         <div className="container">

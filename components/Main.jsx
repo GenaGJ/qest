@@ -11,14 +11,15 @@ module.exports = function Main({ title }) {
             alt=""
           />
         </div>
-        <form action="/main" id="userName">
+        <form id="userName">
           <div>What is your name?</div>
           <div>
-            <input type="text" name="name" required />
+            <input type="text" name="user" required />
           </div>
-          <a href="/questions">
-            <button type="submit">Game</button>
-          </a>
+
+          <button type="submit" id="sendBtn">
+            Game
+          </button>
         </form>
       </div>
     </Layout>
