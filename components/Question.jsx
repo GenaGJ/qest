@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Qestions({ title, theme }) {
+module.exports = function Qestions({ title, theme,user }) {
   return (
-    <Layout title={title}>
+    <Layout title={title} user={user}>
       <div className="questions">
         <div>
           1. <a href={`/cardlist/${theme[0].id}`}>{theme[0].name}</a>

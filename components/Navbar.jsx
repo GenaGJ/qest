@@ -1,7 +1,6 @@
 const React = require('react');
-const Layout = require('./Layout');
 
-module.exports = function Navbar() {
+module.exports = function Navbar({ user }) {
   return (
     <div className="navbar">
       <div>
@@ -12,7 +11,7 @@ module.exports = function Navbar() {
       <div>
         <img src="/image/user.png" alt="" />
       </div>
-      <div className="userHello" id="userHello"></div>
+      {user && <div>Hello, {user.user}</div>}
       <div>
         <a href="/questions">In game</a>
       </div>

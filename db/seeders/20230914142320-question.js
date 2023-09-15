@@ -119,15 +119,15 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          text: 'Очкует',
-          ansver: 'Очкует',
+          text: 'Что кричал Михаил Галустян на отдыхе?!',
+          ansver: 'ТАГИЛ!!!',
           idTheme: 3,
           count: 100,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
       ],
-      {}
+      {},
     );
   },
 
