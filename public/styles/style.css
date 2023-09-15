@@ -8,6 +8,21 @@ a {
   color: black;
   cursor: pointer;
 }
+
+#btn {
+  width: 400px;
+  border: none;
+  height: 20px;
+  border-radius: 10px;
+}
+#inputValue {
+  width: 400px;
+  height: 20px;
+  padding-left: 20px;
+  border: none;
+
+  border-radius: 10px;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -88,11 +103,6 @@ a {
 .true {
   display: none;
   overflow: hidden;
-
-}
-
-.userHello {
-  display: none;
 }
 
 /* ------------- */
@@ -184,7 +194,7 @@ figcaption {
   display: none;
   width: 4rem;
   height: 4rem;
-  border: 1px solid #e60012;
+  border: 1px solid #13e600;
   border-radius: 50%;
   cursor: pointer;
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -197,7 +207,7 @@ figcaption {
   top: 55%;
   width: 1rem;
   height: 1px;
-  background-color: #e60012;
+  background-color: #13e600;
   transform-origin: left bottom;
   transform: translate3d(0, -50%, 0) rotate(-45deg);
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -218,7 +228,7 @@ figcaption {
   left: 50%;
   width: 2rem;
   height: 1px;
-  background-color: #e60012;
+  background-color: #13e600;
   transform: translate3d(-50%, -50%, 0);
 }
 #s-1:checked ~ .js-slider .js-slider_nav .s-nav-1,

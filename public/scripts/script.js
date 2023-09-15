@@ -2,8 +2,6 @@ const userName = document.getElementById('userName');
 const userHello = document.getElementById('userHello');
 const logOut = document.getElementById('logOut');
 const sendId = document.querySelectorAll('#sendId');
-const falseDiv = document.querySelectorAll('#false');
-const trueDiv = document.querySelectorAll('#true');
 
 if (userName) {
   userName.addEventListener('submit', async (e) => {
@@ -19,10 +17,8 @@ if (userName) {
       }),
     });
     const data = await res.json();
-
     if (data.message === 'ok') {
-      userHello.style.display = 'block';
-      userHello.textContent = `Hello, ${user.value}!`;
+      window.location.assign('/questions');
     } else {
       console.log('Error');
     }
@@ -40,7 +36,6 @@ if (sendId) {
       } else {
         el.innerHTML = '<div>Ответ верный!</div>';
       }
-      console.log(trueanswer, answer);
     });
   });
 }

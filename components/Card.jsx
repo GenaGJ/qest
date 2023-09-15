@@ -1,13 +1,13 @@
 const React = require('react');
 
-module.exports = function Card({ questions }) {
+module.exports = function Card({ questions, img }) {
   return (
     <div style={{ width: '400px', height: '400px' }}>
       <div className="imageCards" name="img" style={{ marginBottom: '20px' }}>
         <img
-          src="https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/4c/22/d0/4c22d05c-e407-7bc4-c5a1-d787a8c4c1bf/cover.jpg/1200x1200bf-60.jpg"
+          src={img}
           alt=""
-          style={{ width: '300px' }}
+          style={{ width: '30vw' }}
         />
       </div>
       <div className="questionsCards" style={{ marginBottom: '20px' }}>
@@ -18,7 +18,7 @@ module.exports = function Card({ questions }) {
           <input type="text" name="answer" id="inputValue" />
         </div>
         <div>
-          <button type="submit">Send</button>
+          <button type="submit" id='btn'>Send</button>
         </div>
       </form>
       <div id="true" style={{ display: 'none' }}>
